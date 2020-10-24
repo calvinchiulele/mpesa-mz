@@ -1,0 +1,42 @@
+{
+    "name": "calvinchiulele/mpesa-mz",
+    "description": "Unofficial Laravel package for Vodacom Mozambique M-Pesa",
+    "type": "library",
+    "require": {
+        "abdulmueid/mpesa": "^1.0",
+        "illuminate/support": "5.8.* || 6.* || 7.* || 8.*",
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Calvin Chiulele",
+            "email": "cchiulele@protonmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CalvinChiulele\\MPesaMz\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CalvinChiulele\\MPesaMz\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CalvinChiulele\\MPesaMz\\Providers\\MPesaMzServiceProvider"
+            ],
+            "aliases": {
+                "MPesaMz": "CalvinChiulele\\MPesaMz\\Facades\\MPesaMz"
+            }
+        }
+    }
+}
